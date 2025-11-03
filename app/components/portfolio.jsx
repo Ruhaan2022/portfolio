@@ -285,10 +285,30 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-        <footer className="py-10 text-center text-sm text-slate-500">
-          © {new Date().getFullYear()} Mohammed Sahir — Built with React &
-          Tailwind
-        </footer>
+       <footer className="py-10 text-center text-sm text-slate-500 space-y-2">
+  <div>
+    © {new Date().getFullYear()} Mohammed Sahir — Built with React & Tailwind
+  </div>
+  <div className="flex flex-wrap justify-center gap-4 text-amber-600">
+    <a
+      href="https://portfolio-5tgr-git-main-saba-jamals-projects.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:underline break-all"
+    >
+      🌐 Portfolio
+    </a>
+    <a
+      href="https://www.linkedin.com/in/mohammad-sahir-956a52b5/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:underline break-all"
+    >
+      🔗 LinkedIn
+    </a>
+  </div>
+</footer>
+
       </main>
     </div>
   );
