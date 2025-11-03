@@ -291,14 +291,14 @@ export default function PortfolioPage() {
             © {new Date().getFullYear()}  Crafted with precision and passion by Mohammed Sahir — Frontend Developer
           </div>
           <div className="flex flex-wrap justify-center gap-4 text-amber-600">
-            <a
+            {/* <a
               href="https://portfolio-5tgr-git-main-saba-jamals-projects.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline break-all"
             >
               🌐 Portfolio
-            </a>
+            </a> */}
             <a
               href="https://www.linkedin.com/in/mohammad-sahir-956a52b5/"
               target="_blank"
