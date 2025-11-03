@@ -2,9 +2,9 @@ import React from "react";
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-900 antialiased">
+    <div className="min-h-screen w-full overflow-x-hidden bg-gradient-to-b from-slate-50 to-white text-slate-900 antialiased">
       {/* HEADER */}
-      <header className="max-w-6xl mx-auto px-6 py-8 flex flex-wrap items-center justify-between">
+      <header className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-wrap items-center justify-between">
         <div className="min-w-[240px]">
           <h1 className="text-2xl font-extrabold tracking-tight">
             Mohammed Sahir
@@ -32,9 +32,9 @@ export default function PortfolioPage() {
         </nav>
       </header>
 
-      <main className="max-w-6xl mx-auto px-6">
+      <main className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* HERO */}
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center my-8">
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center my-6 sm:my-10">
           <div className="lg:col-span-2">
             <p className="text-sm text-amber-600 font-semibold">
               MERN • React • Node • AWS • Azure • CI/CD
@@ -96,7 +96,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* PROJECTS */}
-        <section id="projects" className="my-12">
+        <section id="projects" className="my-10 sm:my-12">
           <h3 className="text-2xl font-bold">Selected Projects</h3>
           <p className="text-slate-600 mt-2">
             Enterprise-grade solutions with measurable impact, cloud scalability
@@ -151,7 +151,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* SKILLS */}
-        <section id="skills" className="my-12">
+        <section id="skills" className="my-10 sm:my-12">
           <h3 className="text-2xl font-bold">Core Skills</h3>
           <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3">
             {[
@@ -185,7 +185,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* EXPERIENCE */}
-        <section id="experience" className="my-12">
+        <section id="experience" className="my-10 sm:my-12">
           <h3 className="text-2xl font-bold">Experience</h3>
 
           <TimelineItem
@@ -213,7 +213,7 @@ export default function PortfolioPage() {
         {/* CONTACT */}
         <section
           id="contact"
-          className="my-12 bg-gradient-to-r from-slate-50 to-white p-8 rounded-2xl border border-slate-100"
+          className="my-10 sm:my-12 bg-gradient-to-r from-slate-50 to-white p-6 sm:p-8 rounded-2xl border border-slate-100"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="break-all">
@@ -285,30 +285,30 @@ export default function PortfolioPage() {
           </div>
         </section>
 
-       <footer className="py-10 text-center text-sm text-slate-500 space-y-2">
-  <div>
-    © {new Date().getFullYear()} Mohammed Sahir — Built with React & Tailwind
-  </div>
-  <div className="flex flex-wrap justify-center gap-4 text-amber-600">
-    <a
-      href="https://portfolio-5tgr-git-main-saba-jamals-projects.vercel.app/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:underline break-all"
-    >
-      🌐 Portfolio
-    </a>
-    <a
-      href="https://www.linkedin.com/in/mohammad-sahir-956a52b5/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="hover:underline break-all"
-    >
-      🔗 LinkedIn
-    </a>
-  </div>
-</footer>
-
+        {/* FOOTER */}
+        <footer className="py-10 text-center text-sm text-slate-500 space-y-2">
+          <div>
+            © {new Date().getFullYear()}  Crafted with precision and passion by Mohammed Sahir — Frontend Developer
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 text-amber-600">
+            <a
+              href="https://portfolio-5tgr-git-main-saba-jamals-projects.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline break-all"
+            >
+              🌐 Portfolio
+            </a>
+            <a
+              href="https://www.linkedin.com/in/mohammad-sahir-956a52b5/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline break-all"
+            >
+              🔗 LinkedIn
+            </a>
+          </div>
+        </footer>
       </main>
     </div>
   );
