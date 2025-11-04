@@ -15,16 +15,16 @@ export default function PortfolioPage() {
       {/* HEADER */}
       <header className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-wrap items-center justify-between">
         <div className="flex items-center gap-4 min-w-[240px]">
-          {/* <div className="relative w-12 h-12 rounded-full overflow-hidden border border-slate-200">
+          <div className="relative w-12 h-12 rounded-full overflow-hidden border border-slate-200">
             <Image
-              src={require("./profile.jpeg")}
+              src={require("/profile.jpeg")}
               alt="Mohammed Sahir"
               fill
               className="object-cover"
               sizes="48px"
               priority
             />
-          </div> */}
+          </div>
           <div>
             <h1 className="text-2xl font-extrabold tracking-tight">
               Mohammed Sahir
