@@ -1,18 +1,40 @@
+"use client";
 import React from "react";
-
+import Image from "next/image";
+// import  profile from "../public/profile.jpeg";
 export default function PortfolioPage() {
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf"; // place your resume in public/
+    link.download = "Mohammed_Sahir_Resume.pdf";
+    link.click();
+  };
+
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-gradient-to-b from-slate-50 to-white text-slate-900 antialiased">
       {/* HEADER */}
       <header className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-wrap items-center justify-between">
-        <div className="min-w-[240px]">
-          <h1 className="text-2xl font-extrabold tracking-tight">
-            Mohammed Sahir
-          </h1>
-          <p className="text-sm text-slate-600">
-            Frontend / MERN Stack Developer • React.js Specialist • Team Lead
-          </p>
+        <div className="flex items-center gap-4 min-w-[240px]">
+          {/* <div className="relative w-12 h-12 rounded-full overflow-hidden border border-slate-200">
+            <Image
+              src={require("./profile.jpeg")}
+              alt="Mohammed Sahir"
+              fill
+              className="object-cover"
+              sizes="48px"
+              priority
+            />
+          </div> */}
+          <div>
+            <h1 className="text-2xl font-extrabold tracking-tight">
+              Mohammed Sahir
+            </h1>
+            <p className="text-sm text-slate-600">
+              Frontend / MERN Stack Developer • React.js Specialist • Team Lead
+            </p>
+          </div>
         </div>
+
         <nav className="flex flex-wrap items-center gap-4 mt-4 sm:mt-0">
           <a href="#projects" className="text-sm hover:underline">
             Projects
@@ -51,12 +73,12 @@ export default function PortfolioPage() {
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4">
-              <a
-                href="/api/resume"
+              <button
+                onClick={handleDownloadResume}
                 className="inline-block bg-amber-600 text-white px-5 py-3 rounded-lg font-medium shadow hover:shadow-lg"
               >
                 Download Resume (PDF)
-              </a>
+              </button>
               <a
                 href="#contact"
                 className="inline-block border border-amber-600 text-amber-600 px-5 py-3 rounded-lg font-medium hover:bg-amber-50"
@@ -76,17 +98,33 @@ export default function PortfolioPage() {
           {/* CONTACT SIDE CARD */}
           <div className="hidden lg:block bg-white rounded-2xl p-6 shadow-md border border-slate-100">
             <div className="bg-gradient-to-tr from-sky-50 to-white rounded-xl p-6 break-all">
-              <h3 className="text-lg font-semibold">Contact</h3>
-              <p className="text-sm text-slate-600 mt-2">Delhi, India</p>
-              <p className="text-sm text-slate-600 mt-1">+91 9318304518</p>
+              <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden border border-slate-200 mb-4">
+                <Image
+                 src={("/profile.jpeg")}
+                  alt="Mohammed Sahir"
+                  fill
+                  className="object-cover"
+                  sizes="96px"
+                  priority
+                />
+              </div>
+              <h3 className="text-lg font-semibold text-center">
+                Mohammed Sahir
+              </h3>
+              <p className="text-sm text-slate-600 text-center">
+                Delhi, India
+              </p>
+              <p className="text-sm text-slate-600 text-center mt-1">
+                +91 9318304518
+              </p>
               <a
-                className="text-sm text-amber-600 mt-2 inline-block break-all"
+                className="text-sm text-amber-600 mt-2 inline-block text-center w-full break-all"
                 href="mailto:sahir.engg@gmail.com"
               >
                 sahir.engg@gmail.com
               </a>
 
-              <div className="mt-4">
+              <div className="mt-4 text-center">
                 <a href="#projects" className="text-xs text-slate-500">
                   View Projects →
                 </a>
@@ -107,7 +145,7 @@ export default function PortfolioPage() {
             <ProjectCard
               title="Coca-Cola – Audience Library (Infosys)"
               tech="React, Node.js, Express.js, Azure Functions, Cosmos DB, Contentful, AWS RDS"
-              summary="Developed a marketing automation and content platform for Coca-Cola’s marketing team to plan personalized campaigns, track referrals, and manage brand tie-ups. Built RESTful APIs, reusable React components, and an agent selection tool. Automated CI/CD pipelines and set up Blue/Green deployments using Bamboo."
+              summary="Developed a marketing automation and content platform for Coca-Cola’s marketing team to plan personalized campaigns, track referrals, and manage brand tie-ups."
               metrics={[
                 "35% faster content publishing",
                 "Reusable UI components",
@@ -118,7 +156,7 @@ export default function PortfolioPage() {
             <ProjectCard
               title="Axis Bank – Retail Services Dashboard (Xebia)"
               tech="React, Node.js, AWS Lambda, CloudFormation, Apigee, Splunk"
-              summary="Developed a real-time incident management dashboard for Axis Bank’s support teams. Implemented Apigee API proxies, validation schemas, and Blue/Green deployments. Improved visibility of live incidents, severity, and impact analysis for service reps."
+              summary="Developed a real-time incident management dashboard for Axis Bank’s support teams."
               metrics={[
                 "45% reduction in triage time",
                 "50% higher productivity",
@@ -129,7 +167,7 @@ export default function PortfolioPage() {
             <ProjectCard
               title="Flying Colors – B2B Real Estate Platform (All Web Solutions)"
               tech="React, Redux, Node.js, Express, Apigee, Material UI"
-              summary="Led frontend development for a 10k+ user B2B real estate marketplace. Designed UI, implemented Redux-based architecture, and integrated secure APIs via Apigee. Improved load times and ensured scalable code structure."
+              summary="Led frontend development for a 10k+ user B2B real estate marketplace."
               metrics={[
                 "30% faster UI rendering",
                 "25% reduced code duplication",
@@ -140,7 +178,7 @@ export default function PortfolioPage() {
             <ProjectCard
               title="Godrej Interio – E-commerce Storefront (Solveda India)"
               tech="React.js, Node.js, MongoDB"
-              summary="Developed a responsive e-commerce platform for furniture and home products. Enhanced checkout flow, optimized APIs, and built a fully tested order management module using React and Node.js."
+              summary="Developed a responsive e-commerce platform for furniture and home products."
               metrics={[
                 "25% faster checkout",
                 "Refactored APIs",
@@ -191,22 +229,22 @@ export default function PortfolioPage() {
           <TimelineItem
             yearRange="2023 – Present"
             title="Technology Lead, Infosys"
-            description="Led frontend & backend initiatives for Coca-Cola and Microsoft projects. Built scalable REST APIs, reusable components, and CI/CD pipelines. Focused on performance optimization and CMS integrations."
+            description="Led frontend & backend initiatives for Coca-Cola and Microsoft projects."
           />
           <TimelineItem
             yearRange="2022 – 2023"
             title="Frontend Lead, All Web Solutions"
-            description="Handled complete frontend delivery and client interactions for Flying Colors B2B platform. Managed 5-member team and achieved 30% faster rendering."
+            description="Handled complete frontend delivery and client interactions for Flying Colors B2B platform."
           />
           <TimelineItem
             yearRange="2019 – 2022"
             title="Consultant, Xebia"
-            description="Developed monitoring dashboards for Axis Bank, automated incident triaging, and improved support productivity using React, Node.js, and AWS."
+            description="Developed monitoring dashboards for Axis Bank, automated incident triaging, and improved support productivity."
           />
           <TimelineItem
             yearRange="2018 – 2019"
             title="MERN Developer, Solveda"
-            description="Built optimized React.js storefront for Godrej Interio. Improved checkout speed and API response times in an Agile environment."
+            description="Built optimized React.js storefront for Godrej Interio."
           />
         </section>
 
@@ -248,15 +286,16 @@ export default function PortfolioPage() {
                 >
                   Email Me
                 </a>
-                <a
-                  href="/api/resume"
+                <button
+                  onClick={handleDownloadResume}
                   className="inline-block border border-amber-600 text-amber-600 px-4 py-2 rounded-md"
                 >
                   Download Resume
-                </a>
+                </button>
               </div>
             </div>
 
+            {/* CONTACT FORM */}
             <form className="bg-white p-6 rounded-lg shadow-sm border border-slate-100">
               <label className="block text-sm font-medium">Name</label>
               <input
@@ -288,17 +327,10 @@ export default function PortfolioPage() {
         {/* FOOTER */}
         <footer className="py-10 text-center text-sm text-slate-500 space-y-2">
           <div>
-            © {new Date().getFullYear()}  Crafted with precision and passion by Mohammed Sahir — Frontend Developer
+            © {new Date().getFullYear()} Crafted with precision and passion by
+            Mohammed Sahir — Frontend Developer
           </div>
           <div className="flex flex-wrap justify-center gap-4 text-amber-600">
-            {/* <a
-              href="https://portfolio-5tgr-git-main-saba-jamals-projects.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline break-all"
-            >
-              🌐 Portfolio
-            </a> */}
             <a
               href="https://www.linkedin.com/in/mohammad-sahir-956a52b5/"
               target="_blank"
