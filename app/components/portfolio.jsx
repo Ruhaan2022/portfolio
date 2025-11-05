@@ -17,7 +17,7 @@ export default function PortfolioPage() {
         <div className="flex items-center gap-4 min-w-[240px]">
           <div className="relative w-12 h-12 rounded-full overflow-hidden border border-slate-200">
             <Image
-              src={require("/profile.jpeg")}
+              src={("/profile.jpeg")}
               alt="Mohammed Sahir"
               fill
               className="object-cover"
